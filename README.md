@@ -27,6 +27,18 @@ This is a simple REST API microservice built with Go, Fiber framework, GORM ORM,
 
 The server will start on port 3000.
 
+## Swagger Documentation
+
+Swagger documentation is available only in development environment.
+
+To enable Swagger in development:
+1. Install the swag CLI tool: `go install github.com/swaggo/swag/cmd/swag@latest`
+2. Run `swag init` to generate/update the documentation files
+3. Set the environment variable `APP_ENV=development`
+4. The Swagger UI will be available at `/swagger`
+
+Note: Basic swagger.json and swagger.yaml files have been created. For production, regenerate them with `swag init` after any code changes.
+
 ## API Endpoints
 
 - `GET /users` - Get all users
